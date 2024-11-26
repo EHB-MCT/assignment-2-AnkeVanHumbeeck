@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube stats</title>
+    <script type="module"src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script type="module" src="scripts/formHandler.js" defer></script>
+</head>
+<body>
+    <form id="youtube-form">
+        <label for="youtube_url">YouTube URL:</label>
+        <input type="text" id="youtube_url" name="youtube_url"><br>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title"><br>
+        <label for="time">Time:</label>
+        <input type="text" id="time" name="time"><br>
+        <label for="youtuber">YouTuber:</label>
+        <input type="text" id="youtuber" name="youtuber"><br>
+        <label for="main_topic">Main topic:</label>
+        <input type="text" id="main_topic" name="main_topic"><br>
+        <label for="learned">What did I learn:</label>
+        <input type="text" id="learned" name="learned"><br>
+        <label for="reason">Why did I watch the video:</label>
+        <input type="text" id="reason" name="reason"><br>
+        <p>Did it give me anxiety</p>
+        <input type="radio" name="anxiety" value="Yes">
+        <label>Yes</label><br>
+        <input type="radio" name="anxiety" value="No">
+        <label>No</label><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
