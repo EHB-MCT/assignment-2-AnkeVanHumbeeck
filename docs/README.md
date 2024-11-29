@@ -1,3 +1,16 @@
+# Data aggregation
+
+## What?
+For this project, I decided to aggregate the data of the videos I watch on YouTube. The main questions I want to answer are:
+- Did I at some point go down a rabbithole?
+- What kind of videos do I get anxiety from?
+- Why do I watch YouTube?
+- What YouTubers do I watch most?
+- What subjects do I watch the most videos about?
+
+## How?
+1. The data gets collected from the form and gets sent to Supabase via the formHandler.js file.
+
 ## Conventions
 
 - Naming
@@ -57,3 +70,43 @@
 - Commits
   formatted in the conventional method 
   Source: (https://www.conventionalcommits.org/en/v1.0.0/)
+
+  ## Files breakdown
+
+- CSS
+  master.css: css added to all pages for consistency
+  reset.css: removes all css defaulted by browser
+  media.css: mediaqueries
+  index.css: page specific
+  Source: (https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
+
+- docs
+  LICENSE: the license of this product
+  progress.md: a step by step of how I made this project
+  README.md: Information about the project, conventions, and
+
+- scripts
+    formHandler.js: creates a connection with the Supabase database, retrieves the data from the form, and sends it through to Supabase
+
+## Data flow
+
+- Data Retrieval  
+  The data gets sent in via index.html
+
+- Data collection
+  The form submission is intercepted, and data is gathered into a formData object in formHandler.js
+
+- Data Insertion:
+  The formData is inserted into the youtube_stats table in Supabase in formHandler.js
+
+## Sources
+ 
+- [HTML](https://www.w3schools.com/html/html_forms.asp) used in index.html
+- [Database](https://supabase.com/)
+- [Database] (https://youtu.be/Gz9bvYybaws?si=i2GLdlXpdNyJollV) used in formHandler.js
+- [Conventions](https://www.w3schools.com/js/js_conventions.asp)
+- [Conventions](https://google.github.io/styleguide/jsguide.html) 
+- [Conventions](https://www.conventionalcommits.org/en/v1.0.0/) 
+- [Conventions](https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
+- [Conventions](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
+- [Conventions](https://standardjs.com/rules.html)
