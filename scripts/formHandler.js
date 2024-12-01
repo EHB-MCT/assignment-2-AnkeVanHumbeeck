@@ -1,5 +1,7 @@
 "use strict";
 
+// Gets the data from the form and puts it in Supabase
+
 import { supabase } from './supabaseConnection.js'; 
 
 // Handle form submission
