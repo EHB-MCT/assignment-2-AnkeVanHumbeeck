@@ -86,7 +86,14 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
   README.md: Information about the project, conventions, and
 
 - scripts
-    formHandler.js: creates a connection with the Supabase database, retrieves the data from the form, and sends it through to Supabase
+  formHandler.js: creates a connection with the Supabase database, retrieves the data from the form, and sends it through to Supabase
+
+- CSS
+  master.css: css added to all pages for consistency
+  reset.css: removes all css defaulted by browser
+  media.css: mediaqueries
+  index.css: page specific
+  Source: (https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
 
 ## Data flow
 
@@ -106,7 +113,8 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
  
 - [HTML](https://www.w3schools.com/html/html_forms.asp) used in index.html
 - [Database](https://supabase.com/)
-- [Database] (https://youtu.be/Gz9bvYybaws?si=i2GLdlXpdNyJollV) used in formHandler.js
+- [Database](https://youtu.be/Gz9bvYybaws?si=i2GLdlXpdNyJollV) used in formHandler.js
+- [Conventions](https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
 - [Conventions](https://www.w3schools.com/js/js_conventions.asp)
 - [Conventions](https://google.github.io/styleguide/jsguide.html) 
 - [Conventions](https://www.conventionalcommits.org/en/v1.0.0/) 

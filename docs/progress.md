@@ -13,3 +13,4 @@
 
 01/12:
     Added documentation to README and overall documentation to formHandler.js and supabaseConnecion.js
+    Added index.css, master.css, media.css, and reset.css + documentation
