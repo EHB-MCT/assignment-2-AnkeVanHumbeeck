@@ -1,0 +1,16 @@
+/* page specific */
+
+body {
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p,
+ul,
+ol,
+li,
+label{
+    color:antiquewhite;
+}
