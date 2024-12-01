@@ -90,14 +90,17 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
 
 ## Data flow
 
-- Data Retrieval  
+- Data retrieval  
   The data gets sent in via index.html
 
 - Data collection
   The form submission is intercepted, and data is gathered into a formData object in formHandler.js
 
-- Data Insertion:
+- Data insertion:
   The formData is inserted into the youtube_stats table in Supabase in formHandler.js
+
+- Database connection
+  Database connection is handled by supabaseConnection.js
 
 ## Sources
  

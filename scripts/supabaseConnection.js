@@ -1,3 +1,5 @@
+//handles the supabase connection
+
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
 const SUPABASE_URL = 'https://ttssqpywstiupazsmouy.supabase.co';
