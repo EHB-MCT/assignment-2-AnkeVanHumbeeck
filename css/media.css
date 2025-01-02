@@ -1,0 +1,15 @@
+/* mediaqueries */
+
+/* iPad */
+@media (max-width: 768px) {
+	body {
+		padding: 10px;
+	}
+}
+
+/* mobile */
+@media (max-width: 480px) {
+	h1 {
+		font-size: 2rem;
+	}
+}
