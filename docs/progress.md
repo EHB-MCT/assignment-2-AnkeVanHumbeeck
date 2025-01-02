@@ -9,3 +9,6 @@
 
 29/11:
     Added explanation, files breakdown, explanation data flow, and sources to the README file, and a progress.md file with the progress so far
+
+02/01:
+    Made the contribiting.md and the CODE_OF_CONDUCT.md file and added all necessary info
