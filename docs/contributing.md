@@ -1,5 +1,5 @@
 # Contribution guidelines
-Welcome! Thank you for considering contributing to this YouTube tracker. We’re excited to have you on board and appreciate your help in improving this project. 
+Welcome! Thank you for considering contributing to this YouTube tracker. I am excited to have you on board and appreciate your help in improving this project. 
 
 If you want to know more about what this project is about and what conventions to follow to contribute to this project, you can read the README file.
 
@@ -17,7 +17,7 @@ Version control is done by github
 If you'd like to test this code yourself, all you need to do is duplicate this repository and link it to your own database (I used Supabase)
 
 ## Type of contributions that are needed
-As aformentioned, you can contribute to this project by finding bugs and reporting/solving them or by suggesting new features
+As aforementioned, you can contribute to this project by finding bugs and reporting/solving them or by suggesting new features
 
 ## Vision
 This project's purpose is to analyze your YouTube data and examine users' behavior online while keeping the statistics clear and easy to understand.
