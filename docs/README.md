@@ -121,3 +121,6 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
 - [Conventions](https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
 - [Conventions](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
 - [Conventions](https://standardjs.com/rules.html)
+- [CODE_OF_CONDUCT](https://github.com/probot/template/blob/master/CODE_OF_CONDUCT.md) used as a template for CODE_OF_CONDUCT.mb
+- [CODE_OF_CONDUCT](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)
+- [Contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors) used as a template for contributing.mb
