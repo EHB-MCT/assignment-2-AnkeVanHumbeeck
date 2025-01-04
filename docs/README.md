@@ -1,6 +1,7 @@
 # Data aggregation
 
 ## What?
+
 For this project, I decided to aggregate the data of the videos I watch on YouTube. The main questions I want to answer are:
 - Did I at some point go down a rabbithole?
 - What kind of videos do I get anxiety from?
@@ -9,6 +10,7 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
 - What subjects do I watch the most videos about?
 
 ## Explanation graphs
+
 - Graph 1: goal
   I made this chart a pie chart because I wanted to visualise the ratio between the goals. It clearly illustrates how much each type contributes to my total content consumption.
 
@@ -25,6 +27,7 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
   I chose to make a top 5 in list format to clearly show the hierarchy between the YouTubers.  
 
 ## How?
+
 1. The data gets collected from the form and gets sent to Supabase via the formHandler.js file.
 
 ## Conventions
@@ -89,7 +92,8 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
   formatted in the conventional method 
   Source: (https://www.conventionalcommits.org/en/v1.0.0/)
 
-  ## Files breakdown
+## Files breakdown
+
 - Assets
   Make sure you put your file in the right location, for example: don't put a jpeg in the 'videos' folder
   If a folder starts containing more than 20 items, create subfolders based on the page you are using it for
@@ -153,6 +157,15 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
   
 - Data visualisation 
   The graphs get made in dataProcessing.js and get shown in stats.html
+
+## Data collection
+
+- Source
+  All data originates from YouTube videos watched by me, with detailed tracking of relevant attributes such as title, topic, duration, and viewing intent
+- Method
+  As soon as I watched a YouTube video, I filled in the form and it got saved in the database
+- Verification
+  The source, method, and origin of the data were verified to maintain the integrity of the dataset used for analysis
 
 ## Sources
  
