@@ -30,17 +30,13 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
 ## Conventions
 
 - Naming
-  Images: lowercase, seperated with underscores
-  File names: camelCase
-  Classes: nouns, starting with a capital
-  Functions: camelCase
-  Variables: camelCase
-  Branches: lowercase, seperated with -
+  Images: lowercase, seperated with underscores \
+  File names: camelCase \
+  Classes: nouns, starting with a capital \
+  Functions: camelCase \
+  Variables: camelCase \
+  Branches: lowercase, seperated with - \
   Source: (https://google.github.io/styleguide/jsguide.html), (https://www.w3schools.com/js/js_conventions.asp)
-
-- Placing
-  Constants: top of the file
-  Source: (https://www.w3schools.com/js/js_conventions.asp)
 
 - Formatting javascript
   Before and after a + , - , = , => , < , > a space
@@ -81,12 +77,12 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
   ```
   Source: (https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
 
-- Comments
-  Only use comments if the logic of the code isn't obvious
-  Don't use shorthand
-  Use single line comments
-  Leave a space between the slashes and the comment
-  Start with a capital letter, like a sentence, but don't end the comment with a period
+- Comments \
+  Only use comments if the logic of the code isn't obvious \
+  Don't use shorthand \
+  Use single line comments \
+  Leave a space between the slashes and the comment \
+  Start with a capital letter, like a sentence, but don't end the comment with a period \
   Source: (https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
 
 - Commits

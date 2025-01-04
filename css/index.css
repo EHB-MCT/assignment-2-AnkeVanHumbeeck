@@ -6,12 +6,12 @@ body {
     column-gap: 5px;
 }
 
-nav{
+nav {
     display: flex;
     grid-column: 10/12;
 }
 
-nav a{
+nav a {
     color: white;
     margin: 20px 40px;
 }
@@ -24,7 +24,7 @@ h1 {
     text-align: center;
 }
 
-h2{
+h2 {
     margin-bottom: 15px;
     margin-top: 100px;
 }
@@ -41,7 +41,7 @@ h2{
     text-align: center;
 }
   
-.chart1 div{
+.chart1 div {
     place-items: center;
     height: 400px;
     width: 400px;
@@ -52,13 +52,13 @@ h2{
     text-align: left;
 }
 
-.chart2{
+.chart2 {
     margin-top: 75px;
     grid-column: 2/12;
     place-items: center;
 }
 
-.chart2 div{
+.chart2 div {
     display: flex;
     align-items: center;
 }
@@ -68,7 +68,7 @@ h2{
     margin-right: 50px;
 }
 
-.chart3{
+.chart3 {
     grid-column: 2/12;
     place-items: center;
     text-align: center;
@@ -78,13 +78,13 @@ h2{
     font-size: 150px;
 }
 
-.chart4{
+.chart4 {
     grid-column: 2/12;
     place-items: center;
     text-align: center;
 }
 
-.chart5{
+.chart5 {
     margin: 0 0 100px 0;
     grid-column: 2/12;
     place-items: center;
@@ -93,7 +93,7 @@ h2{
 
 
 /* Index file */
-#youtube-form{
+#youtube-form {
     margin-top: 100px;
     grid-column: 6/9;
 }

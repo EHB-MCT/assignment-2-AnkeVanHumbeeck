@@ -52,11 +52,11 @@ function goal() {
   let instructionGoal = 0;
 
   videos.forEach(video => {
-    if (video.reason == "Information"){
+    if (video.reason == 'Information') {
       informativeGoal++;
-    } else if (video.reason == "Entertainement"){
+    } else if (video.reason == 'Entertainement') {
       entertainmentGoal++;
-    } else if (video.reason == "Instruction"){
+    } else if (video.reason == 'Instruction') {
       instructionGoal++;
     }
   });
@@ -67,24 +67,24 @@ function goal() {
   }
 
   // Settings graph
-  const ctx = document.getElementById("myChart").getContext("2d");
+  const ctx = document.getElementById('myChart').getContext('2d');
   chartInstance = new Chart(ctx, {
-    type: "doughnut",
+    type: 'doughnut',
     data: {
-      labels: ["Informative", "Entertainment", "Education"],
+      labels: ['Informative', 'Entertainment', 'Education'],
       datasets: [
         {
-          label: "Content Types",
+          label: 'Content Types',
           data: [informativeGoal, entertainmentGoal, instructionGoal],
           backgroundColor: [
-            "rgb(255, 0, 0)",
-            "rgb(255, 255, 255)",
-            "rgb(38, 38, 39)"
+            'rgb(255, 0, 0)',
+            'rgb(255, 255, 255)',
+            'rgb(38, 38, 39)'
           ],
           borderColor: [
-            "rgb(255, 0, 0)",
-            "rgb(255, 255, 255)",
-            "rgb(38, 38, 39)"
+            'rgb(255, 0, 0)',
+            'rgb(255, 255, 255)',
+            'rgb(38, 38, 39)'
           ],
           borderWidth: 1
         }
@@ -94,7 +94,7 @@ function goal() {
       plugins: {
         legend: {
           labels: {
-            color: "white"
+            color: 'white'
           }
         }
       }
@@ -123,7 +123,7 @@ function totalTimeWatched() {
   const timeWatched = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 
   // Inserts the time into the html
-  document.getElementById("totalTime").insertAdjacentHTML("afterbegin", `<p>${timeWatched}</p>`)
+  document.getElementById('totalTime').insertAdjacentHTML('afterbegin', `<p>${timeWatched}</p>`)
 }
 
 // Counts the number of times I watched more than one video on the same subject consecutively 
@@ -151,7 +151,7 @@ function amountOfRabbitHoles() {
   }
 
   // Inserts the final amount into the html
-  document.getElementById("rabbitholes").insertAdjacentHTML("afterbegin", `<p>${repeatCount}</p>`) 
+  document.getElementById('rabbitholes').insertAdjacentHTML('afterbegin', `<p>${repeatCount}</p>`) 
 }
 
 // Calculates the top five genres and the anxiety per genre and then puts it in one chart
@@ -186,7 +186,7 @@ function subjectVSAnxiety() {
     mixedChart.destroy();
   }
 
-  const ctx = document.getElementById("myChart2").getContext("2d");
+  const ctx = document.getElementById('myChart2').getContext('2d');
 
   mixedChart = new Chart(ctx, {
     data: {
@@ -195,7 +195,7 @@ function subjectVSAnxiety() {
           type: 'line',
           label: 'Amount of anxiety',
           data: anxietyCount,
-          borderColor: "rgb(255, 225, 225)",
+          borderColor: 'rgb(255, 225, 225)',
           borderWidth: 2,
           fill: false,
         },
@@ -203,7 +203,7 @@ function subjectVSAnxiety() {
           type: 'bar',
           label: 'Videos Watched',
           data: data,
-          backgroundColor: "rgb(255, 0, 0)",
+          backgroundColor: 'rgb(255, 0, 0)',
         },
       ],
       labels: labels,
@@ -212,9 +212,9 @@ function subjectVSAnxiety() {
       responsive: true,
       plugins: {
         legend: {
-          position: "bottom",
+          position: 'bottom',
           labels: {
-            color: "white",
+            color: 'white',
           },
         },
         tooltip: {
@@ -225,22 +225,22 @@ function subjectVSAnxiety() {
         x: {
           title: {
             display: true,
-            color: "white",
+            color: 'white',
             text: 'Genres',
           },
           ticks: {
-            color: "white",
+            color: 'white',
           },
         },
         y: {
           beginAtZero: true,
           title: {
             display: true,
-            color: "white",
+            color: 'white',
             text: 'Number of Videos Watched',
           },
           ticks: {
-            color: "white",
+            color: 'white',
           },
         },
       },
@@ -275,7 +275,7 @@ function topYouTubers() {
   });
   htmlString += `</ol>`;
 
-  document.getElementById("topYouTubers").insertAdjacentHTML("afterbegin", htmlString)
+  document.getElementById('topYouTubers').insertAdjacentHTML('afterbegin', htmlString)
 }
 
 checkData();
