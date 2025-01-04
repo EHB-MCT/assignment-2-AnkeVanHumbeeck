@@ -15,5 +15,18 @@
     Added documentation to README and overall documentation to formHandler.js and supabaseConnecion.js
     Added index.css, master.css, media.css, and reset.css + documentation
 
-02/01:
+06/12:
+    Changed folder logic
+
+02/01: 
     Made the contribiting.md and the CODE_OF_CONDUCT.md file and added all necessary info
+
+03/01:
+    Made the dataProcessing.js file with the code for the five graphs
+
+04/01:
+    Made the CSS for the data visualisation page
+    Made the CREDITS.md file
+    Completed the docs
+    Refactored the code to fit the conventions
+
