@@ -1,14 +1,14 @@
-"use strict";
-
 // Gets the data from the form and puts it in Supabase
+
+"use strict";
 
 import { supabase } from './supabaseConnection.js'; 
 
-// Handle form submission
+// Handles the form submission
 document.getElementById('youtube-form').addEventListener('submit', async function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
-    // Gather form data
+    // Gathers the form data
     const formData = {
         youtube_url: document.getElementById('youtube_url').value,
         title: document.getElementById('title').value,
@@ -20,7 +20,7 @@ document.getElementById('youtube-form').addEventListener('submit', async functio
         anxiety: document.querySelector('input[name="anxiety"]:checked')?.value === "Yes"
     };
 
-    // Insert data into Supabase
+    // Inserts the data into Supabase
     const { data, error } = await supabase
         .from('youtube_stats')
         .insert([formData]);

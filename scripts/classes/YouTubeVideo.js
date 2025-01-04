@@ -1,5 +1,8 @@
+// Class for YouTube video data, used for consistency in the data
+
 "use strict";
 
+// Class with all of the fields from the database
 export default class YouTubeVideo {
 	constructor(anxiety, created_at, id, learned, main_topic, reason, time, title, youtube_url, youtuber) {
 		this.anxiety = anxiety;

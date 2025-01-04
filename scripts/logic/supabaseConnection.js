@@ -1,4 +1,4 @@
-//handles the supabase connection
+// Handles the Supabase connection
 
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 

@@ -8,6 +8,22 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
 - What YouTubers do I watch most?
 - What subjects do I watch the most videos about?
 
+## Explanation graphs
+- Graph 1: goal
+  I made this chart a pie chart because I wanted to visualise the ratio between the goals. It clearly illustrates how much each type contributes to my total content consumption.
+
+- Graph 2: total time watched
+  I decided that the easiest way to visualise the amount of time I've spent watching YouTube was to count it all up and display the number. Numbers are also impactful and can grab attention quickly. 
+
+- Graph 3: rabbitholes
+  I used a single number to represent the amount of rabbitholes I went through because it provides a straightforward, representation of the data. It avoids overwhelming the viewer with excessive details and highlights the core insight directly.
+
+- Graph 4: Topic VS anxiety
+  I combined a line and a bar chart to show the relation between the topic and the anxiety level whilst watching a video about that topic. 
+
+- Graph 5: Top YouTubers
+  I chose to make a top 5 in list format to clearly show the hierarchy between the YouTubers.  
+
 ## How?
 1. The data gets collected from the form and gets sent to Supabase via the formHandler.js file.
 
@@ -16,18 +32,17 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
 - Naming
   Images: lowercase, seperated with underscores
   File names: camelCase
-  Folder names: lowercase, seperated with -
   Classes: nouns, starting with a capital
   Functions: camelCase
   Variables: camelCase
-  Branches: type of branch/lowercase description, seperated with -
-  Source: (https://google.github.io/styleguide/jsguide.html), (https://www.w3schools.com/js/js_conventions.asp), (https://medium.com/@mirazhs/naming-conventions-in-next-js-boosting-seo-and-code-maintainability-d4150fe7e6e)
+  Branches: lowercase, seperated with -
+  Source: (https://google.github.io/styleguide/jsguide.html), (https://www.w3schools.com/js/js_conventions.asp)
 
 - Placing
   Constants: top of the file
   Source: (https://www.w3schools.com/js/js_conventions.asp)
 
-- Formatting
+- Formatting javascript
   Before and after a + , - , = , => , < , > a space
 
   Functions, foreach, and other things that use curly brackets are formatted like this:
@@ -53,6 +68,12 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
   console.log(`hello ${name}`)
   ```
   Source: (https://standardjs.com/rules.html)
+
+- Formatting CSS
+  .class {
+
+  }
+  --> Add a space between the name and the curly brackets
 
 - Arrays
   ```
@@ -87,33 +108,43 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
   README.md: Information about the project, conventions, and
 
 - scripts
-  - Logic:
-      supabaseConnection.js: creates a connection with the Supabase database
-      formHandler.js: retrieves the data from the form, and sends it through to Supabase
+  formHandler.js: creates a connection with the Supabase database, retrieves the data from the form, and sends it through to Supabase
+
+- CSS
+  master.css: css added to all pages for consistency
+  reset.css: removes all css defaulted by browser
+  media.css: mediaqueries
+  index.css: page specific
+  Source: (https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
 
 ## Data flow
 
-- Data Retrieval  
+- Data retrieval  
   The data gets sent in via index.html
 
-Logic folder:
 - Data collection
   The form submission is intercepted, and data is gathered into a formData object in formHandler.js
-- Data Insertion:
+
+- Data insertion:
   The formData is inserted into the youtube_stats table in Supabase in formHandler.js
 
-Storage:
-- Data gets stored in Supabase
+- Database connection
+  Database connection is handled by supabaseConnection.js
 
 ## Sources
  
 - [HTML](https://www.w3schools.com/html/html_forms.asp) used in index.html
 - [Database](https://supabase.com/)
-- [Database] (https://youtu.be/Gz9bvYybaws?si=i2GLdlXpdNyJollV) used in formHandler.js
+- [Database](https://youtu.be/Gz9bvYybaws?si=i2GLdlXpdNyJollV) used in formHandler.js
+- [Conventions](https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
 - [Conventions](https://www.w3schools.com/js/js_conventions.asp)
-- [Conventions] (https://medium.com/@mirazhs/naming-conventions-in-next-js-boosting-seo-and-code-maintainability-d4150fe7e6e)
 - [Conventions](https://google.github.io/styleguide/jsguide.html) 
 - [Conventions](https://www.conventionalcommits.org/en/v1.0.0/) 
 - [Conventions](https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
 - [Conventions](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
 - [Conventions](https://standardjs.com/rules.html)
+- [CODE_OF_CONDUCT](https://github.com/probot/template/blob/master/CODE_OF_CONDUCT.md) used as a template for CODE_OF_CONDUCT.mb
+- [CODE_OF_CONDUCT](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)
+- [Contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors) used as a template for contributing.mb
+- [ChatGPT_time_calculation](https://chatgpt.com/share/67794cc9-9c08-800d-bb43-8c45e80a5151)
+- [Chart.js](https://www.chartjs.org/docs/latest/charts/mixed.html)

@@ -1,3 +1,5 @@
+// Processes the data so it can be displayed in graphs
+
 "use strict";
 
 import { fetchData } from './fetch.js';
@@ -6,10 +8,8 @@ import YouTubeVideo from '../classes/YouTubeVideo.js';
 let videos = [];
 let chartInstance;
 let mixedChart;
-let informativeGoal = 0;
-let entertainmentGoal = 0;
-let instructionGoal = 0;
 
+// Calls the fetchData function to retrieve data from the API and checks it
 const checkData = async () => {
   const data = await fetchData();
   if (data) {
@@ -19,7 +19,9 @@ const checkData = async () => {
   }
 };
 
+// Processes the raw data retrieved from the fetchData function
 function processData(data) {
+  // Loops over the data and puts it into a YouTubeVideo object
   data.forEach((element) => {
     const video = new YouTubeVideo(
       element.anxiety,
@@ -42,8 +44,13 @@ function processData(data) {
   topYouTubers();
 }
 
-// Calculate and display the goal graph
+// Calculates and displays the goal graph
 function goal() {
+  // Calculates the amount of videos watched for every goal
+  let informativeGoal = 0;
+  let entertainmentGoal = 0;
+  let instructionGoal = 0;
+
   videos.forEach(video => {
     if (video.reason == "Information"){
       informativeGoal++;
@@ -54,12 +61,13 @@ function goal() {
     }
   });
 
+  // Destroys the graph if there is one
   if (chartInstance) {
     chartInstance.destroy();
   }
 
+  // Settings graph
   const ctx = document.getElementById("myChart").getContext("2d");
-
   chartInstance = new Chart(ctx, {
     type: "doughnut",
     data: {
@@ -94,10 +102,12 @@ function goal() {
   });
 }
 
-// Calculate the total time and inserts it in the HTML
+// Calculates the total time and inserts it in the HTML
 function totalTimeWatched() {
+  // Sets the time to 0
   let totalSeconds = 0;
 
+  // Loops over the videos and counts up the time
   videos.forEach(video => {
     const parts = video.time.split(':').map(Number);
     if (parts.length === 2) {
@@ -112,6 +122,7 @@ function totalTimeWatched() {
   const seconds = totalSeconds % 60;
   const timeWatched = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 
+  // Inserts the time into the html
   document.getElementById("totalTime").insertAdjacentHTML("afterbegin", `<p>${timeWatched}</p>`)
 }
 
@@ -121,6 +132,7 @@ function amountOfRabbitHoles() {
   let previousTopic = null;
   let repeatCount = 0;
 
+  // Loops over the videos and checks if there is more than one video about the subject consecutively 
   videos.forEach((element, index) => {
     if (element.main_topic === previousTopic) {
       consecutiveCount++;
@@ -138,11 +150,13 @@ function amountOfRabbitHoles() {
     repeatCount++;
   }
 
+  // Inserts the final amount into the html
   document.getElementById("rabbitholes").insertAdjacentHTML("afterbegin", `<p>${repeatCount}</p>`) 
 }
 
+// Calculates the top five genres and the anxiety per genre and then puts it in one chart
 function subjectVSAnxiety() {
-  // Calculate the top 5 genres and the amount of videos I watched about it
+  // Calculate the top five genres and the amount of videos I watched about it
   const genreCount = {};
 
   videos.forEach(genre => {
@@ -161,7 +175,6 @@ function subjectVSAnxiety() {
 
   const labels = topFiveGenres.map(genre => genre.main_topic);
   const data = topFiveGenres.map(genre => genre.count);
-
   
   // Calculates the amount of anxiety per genre
   let anxietyCount = topFiveGenres.map(genre => 
@@ -235,10 +248,11 @@ function subjectVSAnxiety() {
   });  
 }
 
-// Calculate the top 5 YouTubers and add them to the HTML
+// Calculates the top five YouTubers and add them to the HTML
 function topYouTubers() {
   const youtuberCount = {};
 
+  // Loops over the videos and counts how many times a YouTuber appears
   videos.forEach(video => {
     const { youtuber } = video;
     if (youtuberCount[youtuber]) {
@@ -248,11 +262,13 @@ function topYouTubers() {
     }
   });
 
-  const sortedYoutubers = Object.entries(youtuberCount)
+  // Sorts the YouTubers by how much they appear and takes the top five
+  const sortedYouTubers = Object.entries(youtuberCount)
     .sort((a, b) => b[1] - a[1])
     .map(entry => ({ youtuber: entry[0], count: entry[1] }));
-  const topFiveYouTubers = sortedYoutubers.slice(0, 5);
+  const topFiveYouTubers = sortedYouTubers.slice(0, 5);
 
+  // Inserts the top five into the html
   let htmlString = `<ol>`;
   topFiveYouTubers.forEach(youtuber => {
     htmlString += `<li>${youtuber.youtuber} - ${youtuber.count} videos</li>`;

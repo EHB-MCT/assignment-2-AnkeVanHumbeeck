@@ -17,3 +17,12 @@
 
 06/12:
     Changed folder logic
+
+02/01: 
+    Made the contribiting.md and the CODE_OF_CONDUCT.md file and added all necessary info
+
+03/01:
+    Made the dataProcessing.js file with the code for the five graphs
+
+04/01:
+    Made the CSS for the data visualisation page and completed the docs
