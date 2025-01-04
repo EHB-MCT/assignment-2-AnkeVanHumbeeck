@@ -1,17 +1,17 @@
 22/11:
-    Started coding the HTML page, chose the license, and added the conventions to the README.md file.
+    Started coding the HTML page, chose the license, and added the conventions to the README.md file
 
 26/11:
-    Connected the form to Supabase and tested wether the data went through.
+    Connected the form to Supabase and tested wether the data went through
 
 28/11:
     Put the website online via Github pages and started collecting data
 
 29/11:
     Added explanation, files breakdown, explanation data flow, and sources to the README file, and a progress.md file with the progress so far
-    Split the formHandler.js file into formHandler.js and supabaseConnection.js for modularity
 
 01/12:
+    Split the formHandler.js file into formHandler.js and supabaseConnection.js for modularity
     Added documentation to README and overall documentation to formHandler.js and supabaseConnecion.js
     Added index.css, master.css, media.css, and reset.css + documentation
 
@@ -25,4 +25,8 @@
     Made the dataProcessing.js file with the code for the five graphs
 
 04/01:
-    Made the CSS for the data visualisation page and completed the docs
+    Made the CSS for the data visualisation page
+    Made the CREDITS.md file
+    Completed the docs
+    Refactored the code to fit the conventions
+
