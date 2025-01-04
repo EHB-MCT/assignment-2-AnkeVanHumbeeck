@@ -94,6 +94,10 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
   Source: (https://www.conventionalcommits.org/en/v1.0.0/)
 
   ## Files breakdown
+- Assets
+  Make sure you put your file in the right location, for example: don't put a jpeg in the 'videos' folder
+  If a folder starts containing more than 20 items, create subfolders based on the page you are using it for
+  Source: (https://pimcore.com/docs/platform/Portal_Engine/Development_Documentation/Customize_Appearance/Frontend_Architecture/)
 
 - CSS
   master.css: css added to all pages for consistency
@@ -105,10 +109,21 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
 - docs
   LICENSE: the license of this product
   progress.md: a step by step of how I made this project
-  README.md: Information about the project, conventions, and
+  README.md: Information about the project, conventions, and data flow
+  CREDITS.md: A summary of the things I used whilst making this project
+  Contributing.md: A document that has guidelines in case you want to contribute to this project
+  CODE_OF_CONDUCT.md: Contains guidelines on the rules you should follow when you interact with this project
 
 - scripts
-  formHandler.js: creates a connection with the Supabase database, retrieves the data from the form, and sends it through to Supabase
+    - classes: contains all the classes used in this project
+        YouTubeVideo.js: a class for the data structure of a YouTube video
+    - data-manipulation: all the js files that have to with the retrieval and the sorting of the data
+        dataProcessing.js: processes and sorts the data so it's ready for the graphs
+        fetch.js: fetches the data from the database
+    - logic: all the js files that have to do with getting the data from the form and sending it to the database
+        formHandler.js: retrieves the data from the form and sends it through to Supabase
+        supabaseConnection.js: creates the connection with the Supabase database
+
 
 - CSS
   master.css: css added to all pages for consistency
@@ -119,7 +134,7 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
 
 ## Data flow
 
-- Data retrieval  
+- Data retrieval (form) 
   The data gets sent in via index.html
 
 - Data collection
@@ -130,6 +145,18 @@ For this project, I decided to aggregate the data of the videos I watch on YouTu
 
 - Database connection
   Database connection is handled by supabaseConnection.js
+
+- Data retrieval (database)
+  The data gets fetched by fetch.js
+
+- Data sorting
+  The data gets handled and sorted by dataProcessing.js
+
+- Data object
+  The data gets structured in YouTubeVideo.js
+  
+- Data visualisation 
+  The graphs get made in dataProcessing.js and get shown in stats.html
 
 ## Sources
  
