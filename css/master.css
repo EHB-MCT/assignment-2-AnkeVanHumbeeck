@@ -1,9 +1,9 @@
-/* css added to all pages for consistency */
+/* Css added to all pages for consistency */
 
 body {
 	font-family: "Arial", sans-serif;
-	background-color: #f4f4f4;
-	color: #333;
+	background-color: #0e0e0f;
+	color: #fff;
 	line-height: 1.6;
 	padding: 20px;
 }
@@ -26,8 +26,22 @@ main {
 
 h1,
 h2,
-h3 {
-	color: #444;
+h3,
+p,
+a,
+ul,
+ol,
+li,
+label {
+	color: #fff;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 32px;
 }
 
 button {

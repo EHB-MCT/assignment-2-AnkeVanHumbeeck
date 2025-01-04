@@ -1,0 +1,68 @@
+<!-- Html file for viewing the statistics-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <script type="module" src="../scripts/data-manipulation/dataProcessing.js" defer></script>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/master.css"/>
+    <link rel="stylesheet" href="../css/media.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Datasubmission</a>
+        <a href="stats.html">Stats</a>
+    </nav>
+    <h1>YouTube Analytics</h1>
+    <h2 class="chart1title">Goal:</h2>
+    <div class="chart1">
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+        <p>The first thing I wanted to find out is why I watch YouTube. <br>
+            It turns out that I mostly watch YouTube to relax, <br>
+            closely followed by wanting to inform myself. </p>
+    </div>
+    <div class="chart2">
+        <h2>Total time watched:</h2>
+        <div>
+            <div id="totalTime">
+            </div>
+            <p>I also wanted to find out what my <br> 
+                total amount of time was spent on YouTube. <br>
+                I'm kind of surprised it's this low, but that might be <br> 
+                because I've been working on school projects.</p>
+        </div>
+    </div>
+    <div class="chart3">
+        <h2>Amount of rabbitholes:</h2>
+        <p>I tend to go down rabbitholes whilst watching YouTube, <br> 
+            which is when I watch more than one video on one subject after one another. <br>
+            I went down
+        </p>
+        <div id="rabbitholes">
+        </div>
+        <p>rabbitholes since the end of November. Which makes sense <br> 
+            since I did personal research on multiple subjects, like nuclear weapons.</p>
+    </div>
+    <div class="chart4">
+        <h2>Topic VS anxiety:</h2>
+        <canvas id="myChart2"></canvas><br>
+        <p>I also gathered data to explore the relationship between my top five video topics and whether they caused me anxiety.<br>
+            This makes sense, since I watch videos in the gaming and art category to relax, and whilst I like learning about <br>
+            history, science, and scams, they do cause some anxiety when it's about serious subjects.
+        </p>
+    </div>
+    <div class="chart5">
+        <h2>Top YouTubers:</h2>
+        <div id="topYouTubers">
+        </div><br>
+        <p>Last, I wanted to know who my top five YouTubers are. <br>
+            These are the YouTubers I watch every upload of as soon as they come out, so this was expected.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

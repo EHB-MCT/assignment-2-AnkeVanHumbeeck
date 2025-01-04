@@ -1,16 +1,99 @@
-/* page specific */
+/* Page specific css */
 
 body {
-    background-color: #2b2b2b;
+    display: grid;
+	grid-template-columns: repeat(12, 1fr);
+    column-gap: 5px;
+}
+
+nav {
     display: flex;
+    grid-column: 10/12;
+}
+
+nav a {
+    color: white;
+    margin: 20px 40px;
+}
+
+/* Stats page */
+
+h1 {
+    margin-top: 100px;
+    grid-column: 1/13;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+    margin-top: 100px;
+}
+
+.chart1 {
+    display: flex;
+    grid-column: 1/13;
+    align-items: center;
     justify-content: center;
+}
+
+.chart1title {
+    grid-column: 1 / 13;
+    text-align: center;
+}
+  
+.chart1 div {
+    place-items: center;
+    height: 400px;
+    width: 400px;
+}
+
+.chart1 p {
+    margin: 0 100px;
+    text-align: left;
+}
+
+.chart2 {
+    margin-top: 75px;
+    grid-column: 2/12;
+    place-items: center;
+}
+
+.chart2 div {
+    display: flex;
     align-items: center;
 }
 
-p,
-ul,
-ol,
-li,
-label{
-    color:antiquewhite;
+.chart2 p:first-child {
+    font-size: 150px;
+    margin-right: 50px;
+}
+
+.chart3 {
+    grid-column: 2/12;
+    place-items: center;
+    text-align: center;
+}
+
+.chart3 p:first-child {
+    font-size: 150px;
+}
+
+.chart4 {
+    grid-column: 2/12;
+    place-items: center;
+    text-align: center;
+}
+
+.chart5 {
+    margin: 0 0 100px 0;
+    grid-column: 2/12;
+    place-items: center;
+    text-align: center;
+}
+
+
+/* Index file */
+#youtube-form {
+    margin-top: 100px;
+    grid-column: 6/9;
 }
