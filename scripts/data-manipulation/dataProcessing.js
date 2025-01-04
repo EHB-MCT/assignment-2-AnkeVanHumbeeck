@@ -83,13 +83,11 @@ function goal() {
       ]
     },
     options: {
-      responsive: true,
       plugins: {
         legend: {
-          position: "top"
-        },
-        tooltip: {
-          enabled: true
+          labels: {
+            color: "white"
+          }
         }
       }
     }
@@ -201,7 +199,10 @@ function subjectVSAnxiety() {
       responsive: true,
       plugins: {
         legend: {
-          position: "top",
+          position: "bottom",
+          labels: {
+            color: "white",
+          },
         },
         tooltip: {
           enabled: true,
@@ -211,19 +212,27 @@ function subjectVSAnxiety() {
         x: {
           title: {
             display: true,
+            color: "white",
             text: 'Genres',
+          },
+          ticks: {
+            color: "white",
           },
         },
         y: {
           beginAtZero: true,
           title: {
             display: true,
+            color: "white",
             text: 'Number of Videos Watched',
+          },
+          ticks: {
+            color: "white",
           },
         },
       },
     },
-  });
+  });  
 }
 
 // Calculate the top 5 YouTubers and add them to the HTML
